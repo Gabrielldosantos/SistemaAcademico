@@ -7,7 +7,7 @@ namespace SistemaAcademico
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new views.AlunoAcademico());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

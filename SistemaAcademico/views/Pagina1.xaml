@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAcademico.views.Pagina1"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+
+    <VerticalStackLayout 
+                Padding="30"                    
+                Spacing="20">
+
+        <!-- Título da página -->
+        <Label 
+            Text="Selecione o Período e a Disciplina"
+            FontSize="20"
+            FontAttributes="Bold"
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+        <!-- Picker para selecionar o período -->
+        <Picker x:Name="periodoPicker" 
+                Title="Selecione o Período"
+                FontSize="12"
+                TextColor="Black"
+                BackgroundColor="#EAEAEA"
+                HeightRequest="60"
+                Margin="0"
+                HorizontalOptions="Fill"
+                SelectedIndexChanged="OnPeriodoSelected" />
+
+        <!-- Label para exibir o período selecionado -->
+        <Label x:Name="periodoSelecionadoLabel"
+               FontSize="16"
+               TextColor="Black"
+               HorizontalOptions="Start"
+               Margin="10,0"
+               Text="Período selecionado: Nenhum" />
+
+        <!-- Picker para selecionar a disciplina -->
+        <Picker x:Name="disciplinasPicker" 
+                Title="Selecione a Disciplina"
+                FontSize="12"
+                TextColor="Black"
+                BackgroundColor="#EAEAEA"
+                HeightRequest="60"
+                Margin="0"
+                HorizontalOptions="Fill"
+                SelectedIndexChanged="OnDisciplinaSelected" />
+
+        <!-- Label para exibir a disciplina selecionada -->
+        <Label x:Name="disciplinaSelecionadaLabel"
+               FontSize="16"
+               TextColor="Black"
+               HorizontalOptions="Start"
+               Margin="10,0"
+               Text="Disciplina selecionada: Nenhuma" />
+
+        <!-- Botão de confirmação -->
+        <Button Text="Avançar" Clicked="Button_Clicked"
+                FontSize="18"
+                TextColor="White"
+                BackgroundColor="#007AFF"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="10,0"
+                HorizontalOptions="Fill" />
+
+    </VerticalStackLayout>
+</ContentPage>
